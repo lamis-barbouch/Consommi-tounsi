@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 
 @Entity
 public class Product implements Serializable {
@@ -23,6 +25,14 @@ public class Product implements Serializable {
 	private float promotion_percentage;
 	private Date date_beginning_promotion;
 	private Date date_end_promotion;
+	
+	@ManyToOne
+	 Provider provider;
+	
+	@ManyToOne
+	 Category category;
+	
+	
 	public Product() {
 		super();
 	}

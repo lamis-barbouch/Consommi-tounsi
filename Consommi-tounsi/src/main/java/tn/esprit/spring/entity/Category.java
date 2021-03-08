@@ -1,11 +1,13 @@
 package tn.esprit.spring.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Category implements Serializable {
@@ -13,6 +15,10 @@ public class Category implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_category;
 	private String name_category;
+	
+	@OneToMany(mappedBy="category")
+	 List<Product> products;
+	
 	public Category() {
 		super();
 		// TODO Auto-generated constructor stub
