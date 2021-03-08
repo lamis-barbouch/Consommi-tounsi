@@ -18,6 +18,14 @@ public class CodePromo implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public CodePromo(int id_codePromo, String code_promo, boolean status_CodePromo) {
+		super();
+		this.id_codePromo = id_codePromo;
+		this.code_promo = code_promo;
+		this.status_CodePromo = status_CodePromo;
+	}
+
 	public int getId_codePromo() {
 		return id_codePromo;
 	}
