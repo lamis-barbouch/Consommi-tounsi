@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity
-public class DeliveryMan extends User {
+public class DeliveryMan extends User  {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int rating_deliveryMan;
 	private int cin;
