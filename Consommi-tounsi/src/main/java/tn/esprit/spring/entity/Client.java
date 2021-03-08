@@ -1,9 +1,12 @@
 package tn.esprit.spring.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class Client extends User {
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private String address;
 	private String city;
 	public String getAddress() {
