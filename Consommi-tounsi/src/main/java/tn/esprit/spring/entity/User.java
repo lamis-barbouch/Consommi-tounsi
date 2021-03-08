@@ -2,6 +2,7 @@ package tn.esprit.spring.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -17,7 +19,9 @@ import javax.persistence.TemporalType;
 public class User implements Serializable {
     @Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id_user;
+	@OneToMany(mappedBy="user")
+    List<Complaint> comlaints;
+    private int id_user;
     private String first_name ;
     private String last_name ;
     private int phone_number;

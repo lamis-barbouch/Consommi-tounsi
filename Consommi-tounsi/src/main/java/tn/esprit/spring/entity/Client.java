@@ -1,12 +1,24 @@
 package tn.esprit.spring.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
-public class Client extends User {
+public class Client extends User  {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@OneToMany(mappedBy="client")
+	List<Fund> funds;
+	@ManyToMany(mappedBy="client")
+	List<SubjectForum> subjectforum;
+	//@OneToMany(mappedBy="client")
+	//List<Order> order;
+	@ManyToMany(mappedBy="client")
+	
 	private String address;
 	private String city;
 	public String getAddress() {
