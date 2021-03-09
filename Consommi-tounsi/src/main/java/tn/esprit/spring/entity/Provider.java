@@ -12,7 +12,8 @@ import javax.persistence.OneToMany;
 
 @Entity
 
-public class Provider implements Serializable{
+public class Provider implements Serializable
+{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_provider;
