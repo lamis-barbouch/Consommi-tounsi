@@ -17,8 +17,16 @@ public class Category implements Serializable {
 	private String name_category;
 	
 	@OneToMany(mappedBy="category")
-	 List<Product> products;
+	private List<Product> products;
 	
+	
+	
+	public List<Product> getProducts() {
+		return products;
+	}
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
 	public Category() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -23,9 +23,17 @@ public class Provider implements Serializable
 	private int rib;
 	
 	@OneToMany(mappedBy="provider")
-	 List<Product> products;
+	 private List<Product> products;
 	
 	
+	
+	
+	public List<Product> getProducts() {
+		return products;
+	}
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
 	public Provider() {
 		super();
 	}
