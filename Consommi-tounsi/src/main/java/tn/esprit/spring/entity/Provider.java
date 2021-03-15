@@ -20,7 +20,7 @@ public class Provider implements Serializable
 	private String name_provider;
 	private String email;
 	private int phone_number;
-	private int rib;
+	private long rib;
 	
 	@OneToMany(mappedBy="provider")
 	 private List<Product> products;
@@ -61,10 +61,10 @@ public class Provider implements Serializable
 	public void setPhone_number(int phone_number) {
 		this.phone_number = phone_number;
 	}
-	public int getRib() {
+	public long getRib() {
 		return rib;
 	}
-	public void setRib(int rib) {
+	public void setRib(long rib) {
 		this.rib = rib;
 	}
 	
