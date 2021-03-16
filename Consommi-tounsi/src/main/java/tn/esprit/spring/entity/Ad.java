@@ -2,9 +2,8 @@ package tn.esprit.spring.entity;
 
 
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -36,8 +35,23 @@ public class Ad {
 	private boolean status;  
 	
 	
-	@ManyToMany (cascade = CascadeType.ALL, mappedBy="ad")
-		private Set<Product> product;
+	
+	
+	
+	
+	@ManyToMany
+	private List<Product> products;
+	
+	
+	public List<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
+    
+	
 	
 	public Ad() {
 		super();
