@@ -7,13 +7,14 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 @Entity
 
-public class Admin extends User {
+public class Admin extends User
+{
 	@OneToMany(mappedBy="admin")
 	List<Ad> ads;
 	//@OneToMany(mappedBy="admin")
 	//List<Event> event;
-	//@OneToMany(mappedBy="admin")
-	//List<Accounting> accounting;
+	@OneToMany(mappedBy="admin")
+	List<Accounting> accounting;
    private int rib;
    private String dicForbiddenWords;
    private float salary;
