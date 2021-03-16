@@ -19,8 +19,9 @@ public class Admin extends User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id_user;
-	@OneToMany(mappedBy="admin")
-	private List<Ad> ads;
+	
+	//@OneToMany(mappedBy="admin")
+	//private List<Ad> ads;
 	
 	@OneToMany(mappedBy="admin")
 	private List<Event> event;
