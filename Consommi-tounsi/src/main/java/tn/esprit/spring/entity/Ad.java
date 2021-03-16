@@ -2,14 +2,14 @@ package tn.esprit.spring.entity;
 
 
 import java.util.Date;
-//import java.util.Set;
+import java.util.Set;
 
-//import javax.persistence.CascadeType;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//import javax.persistence.OneToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -35,8 +35,8 @@ public class Ad {
 	private boolean status;  
 	
 	
-	//@OneToMany (cascade = CascadeType.ALL, mappedBy="ad")
-		//private Set<Admin> admin;
+	@OneToMany (cascade = CascadeType.ALL, mappedBy="ad")
+		private Set<Admin> admin;
 	
 	public Ad() {
 		super();
