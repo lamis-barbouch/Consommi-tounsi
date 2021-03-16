@@ -15,6 +15,7 @@ public class Admin extends User
 	//List<Event> event;
 	@OneToMany(mappedBy="admin")
 	List<Accounting> accounting;
+	List<DeliveryMan> deliverymens;
    private int rib;
    private String dicForbiddenWords;
    private float salary;
