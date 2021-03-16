@@ -2,11 +2,14 @@ package tn.esprit.spring.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -21,6 +24,12 @@ public class Event implements Serializable {
 	private int id_event;
 	private String name_event;
 	private String description_event;
+	
+	@ManyToOne
+	private Admin admin;
+	
+	@ManyToMany
+	private List<Client>listclient;
 	
 	@Temporal(TemporalType.DATE)
 	private Date start_date_event;

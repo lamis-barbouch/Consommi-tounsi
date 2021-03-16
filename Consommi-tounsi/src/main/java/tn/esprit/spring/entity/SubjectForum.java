@@ -1,11 +1,14 @@
 package tn.esprit.spring.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class SubjectForum implements Serializable {
@@ -20,6 +23,12 @@ public class SubjectForum implements Serializable {
 	private String subject;
 	private String title;
 	private int number_LikesSubject;
+	
+	@OneToMany(mappedBy="subjectforum")
+	private List<Comment> comment;
+	
+	@ManyToMany
+	private List<Client> listclient;
 	public int getId_subject() {
 		return id_subject;
 	}

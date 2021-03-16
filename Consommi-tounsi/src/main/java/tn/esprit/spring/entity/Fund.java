@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 public class Fund implements Serializable {
 
@@ -25,6 +26,8 @@ public class Fund implements Serializable {
 	public void setAmount(float amount) {
 		this.amount = amount;
 	}
+	@ManyToOne
+	private Client client;
 	public Fund() {
 		super();
 		// TODO Auto-generated constructor stub

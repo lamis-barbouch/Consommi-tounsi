@@ -14,6 +14,11 @@ public class Comment implements Serializable {
 	private int id_comment;
 	private String text_comment;
 	@ManyToOne
+	private Client client;
+	
+	@ManyToOne
+	private SubjectForum subjectforum;
+	@ManyToOne
 	//private User user;
 	
 	

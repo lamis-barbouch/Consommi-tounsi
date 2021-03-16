@@ -5,13 +5,18 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-@Entity
 
+@Entity
 public class Admin extends User {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@OneToMany(mappedBy="admin")
-	List<Ad> ads;
-	//@OneToMany(mappedBy="admin")
-	//List<Event> event;
+	private List<Ad> ads;
+	
+	@OneToMany(mappedBy="admin")
+	private List<Event> event;
 	//@OneToMany(mappedBy="admin")
 	//List<Accounting> accounting;
    private int rib;
