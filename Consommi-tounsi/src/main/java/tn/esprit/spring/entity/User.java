@@ -19,9 +19,10 @@ import javax.persistence.TemporalType;
 public class User implements Serializable {
     @Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id_user;
 	@OneToMany(mappedBy="user")
     List<Complaint> comlaints;
-    private int id_user;
+  
     private String first_name ;
     private String last_name ;
     private int phone_number;
