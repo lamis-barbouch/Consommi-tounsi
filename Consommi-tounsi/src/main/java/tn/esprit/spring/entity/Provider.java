@@ -12,19 +12,28 @@ import javax.persistence.OneToMany;
 
 @Entity
 
-public class Provider implements Serializable{
+public class Provider implements Serializable
+{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_provider;
 	private String name_provider;
 	private String email;
 	private int phone_number;
-	private int rib;
+	private long rib;
 	
 	@OneToMany(mappedBy="provider")
-	 List<Product> products;
+	 private List<Product> products;
 	
 	
+	
+	
+	public List<Product> getProducts() {
+		return products;
+	}
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
 	public Provider() {
 		super();
 	}
@@ -52,10 +61,10 @@ public class Provider implements Serializable{
 	public void setPhone_number(int phone_number) {
 		this.phone_number = phone_number;
 	}
-	public int getRib() {
+	public long getRib() {
 		return rib;
 	}
-	public void setRib(int rib) {
+	public void setRib(long rib) {
 		this.rib = rib;
 	}
 	

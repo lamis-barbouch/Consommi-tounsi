@@ -2,11 +2,13 @@ package tn.esprit.spring.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Fund implements Serializable {
 
 	@Id
@@ -26,6 +28,8 @@ public class Fund implements Serializable {
 	public void setAmount(float amount) {
 		this.amount = amount;
 	}
+	@ManyToOne
+	private Client client;
 	public Fund() {
 		super();
 		// TODO Auto-generated constructor stub

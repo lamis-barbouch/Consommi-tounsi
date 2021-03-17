@@ -5,22 +5,39 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
 public class Client extends User  {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int id_user;
+	
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@OneToMany(mappedBy="client")
 	List<Fund> funds;
-	@ManyToMany(mappedBy="client")
-	List<SubjectForum> subjectforum;
+	
+	@ManyToMany(mappedBy="listclient")
+	private List<Event> listevent;
+	
+	@OneToMany(mappedBy="client")
+	private List<Comment> comment;
+
 	//@OneToMany(mappedBy="client")
 	//List<Order> order;
-	@ManyToMany(mappedBy="client")
+
 	
 	private String address;
 	private String city;
+	@ManyToMany(mappedBy="listclient")
+	private List<SubjectForum> listsubjectforum;
 	public String getAddress() {
 		return address;
 	}
