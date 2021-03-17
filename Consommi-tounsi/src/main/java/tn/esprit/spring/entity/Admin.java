@@ -9,14 +9,11 @@ import javax.persistence.OneToMany;
 
 public class Admin extends User
 {
+	
+	
 	@OneToMany(mappedBy="admin")
-	List<Ad> ads;
-	//@OneToMany(mappedBy="admin")
-	//List<Event> event;
-	@OneToMany(mappedBy="admin")
-	List<Accounting> accounting;
-	List<DeliveryMan> deliverymens;
-   private int rib;
+	List<Event> event;
+	 private int rib;
    private String dicForbiddenWords;
    private float salary;
 public int getRib() {

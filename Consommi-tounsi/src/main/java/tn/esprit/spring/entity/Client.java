@@ -12,17 +12,14 @@ import javax.persistence.OneToMany;
 @Entity
 public class Client extends User  {
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id_user;
 	
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	@OneToMany(mappedBy="client")
-	List<Fund> funds;
+	private List<Fund> funds;
 	
 	@ManyToMany(mappedBy="listclient")
 	private List<Event> listevent;
@@ -32,7 +29,8 @@ public class Client extends User  {
 
 	//@OneToMany(mappedBy="client")
 	//List<Order> order;
-
+    @ManyToMany(mappedBy="client")
+    private List<SubjectForum> subjectforums;
 	
 	private String address;
 	private String city;
