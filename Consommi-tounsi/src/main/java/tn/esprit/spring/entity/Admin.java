@@ -21,12 +21,12 @@ public class Admin extends User {
     private int id_user;
 	
 	//@OneToMany(mappedBy="admin")
-	//private List<Ad> ads;
+	//private List<Ad> ad;
 	
 	@OneToMany(mappedBy="admin")
 	private List<Event> event;
-	//@OneToMany(mappedBy="admin")
-	//List<Accounting> accounting;
+	@OneToMany(mappedBy="admin")
+	List<Accounting> accounting;
    private int rib;
    private String dicForbiddenWords;
    private float salary;

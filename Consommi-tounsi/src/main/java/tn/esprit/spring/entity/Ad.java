@@ -33,26 +33,14 @@ public class Ad {
 	private String targeted_population;
 	private String ad_name;
 	private boolean status;  
-	
-	
-	
-	
-	
-	
 	@ManyToMany
 	private List<Product> products;
-	
-	
 	public List<Product> getProducts() {
 		return products;
 	}
-
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
-    
-	
-	
 	public Ad() {
 		super();
 	}
