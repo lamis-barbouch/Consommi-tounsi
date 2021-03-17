@@ -20,8 +20,12 @@ public class DeliveryMan extends User  {
 	private float salary;
 	private float bonus;
 	private String city;
+
+	@OneToMany(mappedBy="deliveryman")
+
 	//@OneToMany(mappedBy="deliveryman")
-	//List<DeliveryMan> deliverymens;
+	
+
 	public int getRating_deliveryMan() {
 		return rating_deliveryMan;
 	}

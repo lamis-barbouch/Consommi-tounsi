@@ -8,13 +8,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-
 @Entity
-public class Admin extends User {
-	/**
-	 * 
-	 */
+
+public class Admin extends User
+{
 	
+
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -22,12 +21,13 @@ public class Admin extends User {
 	
 	//@OneToMany(mappedBy="admin")
 	//private List<Ad> ad;
-	
-	@OneToMany(mappedBy="admin")
+
+
 	private List<Event> event;
 	@OneToMany(mappedBy="admin")
 	List<Accounting> accounting;
    private int rib;
+
    private String dicForbiddenWords;
    private float salary;
 public int getRib() {
