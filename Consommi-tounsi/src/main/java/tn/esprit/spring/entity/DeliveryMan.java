@@ -20,12 +20,12 @@ public class DeliveryMan extends User  {
 	private float salary;
 	private float bonus;
 	private String city;
-<<<<<<< HEAD
+
 	@OneToMany(mappedBy="deliveryman")
-=======
+
 	//@OneToMany(mappedBy="deliveryman")
-	//List<DeliveryMan> deliverymens;
->>>>>>> branch 'main' of https://github.com/lamis-barbouch/Consommi-tounsi.git
+	
+
 	public int getRating_deliveryMan() {
 		return rating_deliveryMan;
 	}
