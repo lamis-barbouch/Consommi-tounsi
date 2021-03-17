@@ -29,13 +29,12 @@ public class Client extends User  {
 
 	//@OneToMany(mappedBy="client")
 	//List<Order> order;
-    @ManyToMany(mappedBy="client")
-    private List<SubjectForum> subjectforums;
-	
-	private String address;
-	private String city;
+    
 	@ManyToMany(mappedBy="listclient")
 	private List<SubjectForum> listsubjectforum;
+	private String address;
+	private String city;
+	
 	public String getAddress() {
 		return address;
 	}
