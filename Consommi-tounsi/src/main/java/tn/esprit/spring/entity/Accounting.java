@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -33,6 +34,8 @@ public class Accounting implements Serializable{
 	@Column(name="gain_permonth")
 	private float gain_permonth;
 
+	
+	
 	public Long getId_accounting() {
 		return id_accounting;
 	}

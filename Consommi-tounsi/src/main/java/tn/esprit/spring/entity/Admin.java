@@ -24,8 +24,7 @@ public class Admin extends User
 
 
 	private List<Event> event;
-	@OneToMany(mappedBy="admin")
-	List<Accounting> accounting;
+	
    private int rib;
 
    private String dicForbiddenWords;
