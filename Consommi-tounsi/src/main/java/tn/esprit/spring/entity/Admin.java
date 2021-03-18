@@ -1,6 +1,5 @@
 package tn.esprit.spring.entity;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -22,7 +21,7 @@ public class Admin extends User
 	//@OneToMany(mappedBy="admin")
 	//private List<Ad> ad;
 
-
+@OneToMany(mappedBy="admin")
 	private List<Event> event;
 	
    private int rib;
