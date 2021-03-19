@@ -22,14 +22,14 @@ public class Delivery implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_delivery;
 	
-	private int fees;
+	private double fees;
 	
 	private String type;
 	
 	//@OneToMany (cascade = CascadeType.ALL, mappedBy="delivery")
 	//private Set<Order> order;
 	
-	public Delivery(int id_delivery, int fees, String type) {
+	public Delivery(int id_delivery, double fees, String type) {
 		super();
 		this.id_delivery = id_delivery;
 		this.fees = fees;
@@ -48,11 +48,11 @@ public class Delivery implements Serializable {
 		this.id_delivery = id_delivery;
 	}
 
-	public int getFees() {
+	public double getFees() {
 		return fees;
 	}
 
-	public void setFees(int fees) {
+	public void setFees(double fees) {
 		this.fees = fees;
 	}
 

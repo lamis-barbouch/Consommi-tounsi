@@ -2,11 +2,13 @@ package tn.esprit.spring.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 
@@ -36,11 +38,32 @@ public class Product implements Serializable {
 	@ManyToOne
 	private Category category;
 	
+	@ManyToMany(mappedBy="products")
+	private List<Cart> carts;
 	
+	public List<Cart> getCarts() {
+		return carts;
+	}
+
+	public void setCarts(List<Cart> carts) {
+		this.carts = carts;
+	}
+	
+	@ManyToMany(mappedBy="products")
+	private List<Ad> Ads;
+	
+
+	public List<Ad> getAds() {
+		return Ads;
+	}
+
+	public void setAds(List<Ad> ads) {
+		Ads = ads;
+	}
+
 	public Product() {
 		super();
 	}
-
 
 	public int getId_product() {
 		return id_product;
