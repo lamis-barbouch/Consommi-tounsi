@@ -17,7 +17,7 @@ public class DeliveryMan extends User  {
 	private int rating_deliveryMan;
 	private int cin;
 	private String address;
-	private float salary;
+	private long salary;
 	private float bonus;
 	private String city;
 
@@ -51,7 +51,7 @@ public class DeliveryMan extends User  {
 	public float getSalary() {
 		return salary;
 	}
-	public void setSalary(float salary) {
+	public void setSalary(long salary) {
 		this.salary = salary;
 	}
 	public float getBonus() {
