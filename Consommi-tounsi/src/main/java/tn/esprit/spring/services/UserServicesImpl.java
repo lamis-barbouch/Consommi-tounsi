@@ -15,7 +15,8 @@ import tn.esprit.spring.repository.IDeliveryManRepository;
 import tn.esprit.spring.repository.IUserRepository;
 
 @Service
-public class UserServicesImpl implements IUserServices{
+public class UserServicesImpl implements IUserServices
+{
 	@Autowired
 	IClientRepository clientrep ;
     @Autowired

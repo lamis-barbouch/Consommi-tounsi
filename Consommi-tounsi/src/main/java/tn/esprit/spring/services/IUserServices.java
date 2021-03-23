@@ -30,6 +30,8 @@ public void deleteUser(int id);
 public User retrieveUser(int id);
 public List<User> retrieveAllUsers();
 
+
+
 public DeliveryMan addDeliveryMan(DeliveryMan d);
 public DeliveryMan updateDeliveryMan(DeliveryMan d);
 public void deletDeliveryMan(int id);
