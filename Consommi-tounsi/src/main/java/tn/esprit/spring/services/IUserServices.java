@@ -17,6 +17,7 @@ public Client addClient(Client c);
 
 
 
+
 public void deleteAdmin(int id);
 public Admin retrieveAdmin(int id);
 public User updateAdmin(Admin a);
