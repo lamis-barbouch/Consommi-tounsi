@@ -8,5 +8,4 @@ import tn.esprit.spring.entity.DeliveryMan;
 
 public interface IDeliveryManRepository extends CrudRepository<DeliveryMan, Integer>
 {
-
 }
