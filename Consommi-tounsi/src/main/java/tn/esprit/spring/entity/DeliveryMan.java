@@ -11,7 +11,8 @@ import javax.persistence.OneToMany;
 @Entity
 public class DeliveryMan extends User  {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.TABLE)
+	@OneToMany(mappedBy="deliveryman") 
     private int id_user;
 
 	private int rating_deliveryMan;
@@ -20,12 +21,12 @@ public class DeliveryMan extends User  {
 	private long salary;
 	private float bonus;
 	private String city;
-
-	@OneToMany(mappedBy="deliveryman")
-
-	//@OneToMany(mappedBy="deliveryman")
-	
-
+	public int getId_user() {
+		return id_user;
+	}
+	public void setId_user(int id_user) {
+		this.id_user = id_user;
+	}
 	public int getRating_deliveryMan() {
 		return rating_deliveryMan;
 	}
@@ -38,17 +39,13 @@ public class DeliveryMan extends User  {
 	public void setCin(int cin) {
 		this.cin = cin;
 	}
-	public DeliveryMan() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	public String getAddress() {
 		return address;
 	}
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public float getSalary() {
+	public long getSalary() {
 		return salary;
 	}
 	public void setSalary(long salary) {
@@ -66,5 +63,14 @@ public class DeliveryMan extends User  {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	public DeliveryMan() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	
+	
 
 }

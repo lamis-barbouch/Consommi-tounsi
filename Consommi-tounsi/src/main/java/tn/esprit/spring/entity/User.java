@@ -14,11 +14,16 @@ import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+@SuppressWarnings("serial")
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
-public class User implements Serializable {
-    @Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+public class User implements Serializable{
+    public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Id
+	@GeneratedValue(strategy=GenerationType.TABLE)
     private int id_user;
 	@OneToMany(mappedBy="user")
     List<Complaint> complaints;
@@ -30,17 +35,20 @@ public class User implements Serializable {
     private String login;
     private String password;
     private String gender ;
+    private String username;
     @Temporal (TemporalType.DATE)
 	private Date date ;
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	public int getId_user() {
 		return id_user;
 	}
 	public void setId_user(int id_user) {
 		this.id_user = id_user;
+	}
+	public List<Complaint> getComplaints() {
+		return complaints;
+	}
+	public void setComplaints(List<Complaint> complaints) {
+		this.complaints = complaints;
 	}
 	public String getFirst_name() {
 		return first_name;
@@ -90,10 +98,11 @@ public class User implements Serializable {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-    
-   
-   
-     
-	
-
+	 public String getUsername() {
+			return username;
+	}
+		public void setUsername(String username) {
+			this.username = username;
+	}
+		
 }

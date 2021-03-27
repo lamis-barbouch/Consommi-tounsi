@@ -15,7 +15,7 @@ public class Admin extends User
 
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.TABLE)
     private int id_user;
 	
 	//@OneToMany(mappedBy="admin")
@@ -23,11 +23,24 @@ public class Admin extends User
 
 @OneToMany(mappedBy="admin")
 	private List<Event> event;
-	
-   private int rib;
+    private int rib;
 
-   private String dicForbiddenWords;
-   private float salary;
+   public Admin() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public int getId_user() {
+	return id_user;
+}
+public void setId_user(int id_user) {
+	this.id_user = id_user;
+}
+public List<Event> getEvent() {
+	return event;
+}
+public void setEvent(List<Event> event) {
+	this.event = event;
+}
 public int getRib() {
 	return rib;
 }
@@ -46,9 +59,11 @@ public float getSalary() {
 public void setSalary(float salary) {
 	this.salary = salary;
 }
-public Admin() {
-	super();
-	// TODO Auto-generated constructor stub
+public static long getSerialversionuid() {
+	return serialVersionUID;
 }
+private String dicForbiddenWords;
+   private float salary;
+
 
 }
