@@ -3,6 +3,7 @@ package tn.esprit.spring.entity;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -37,11 +38,11 @@ public class Client extends User  {
 	@OneToMany(mappedBy="client")
 	private List<Comment> comment;
 
-<<<<<<< main
+
 	public Client() {
-		super();
+		super() ;
 		// TODO Auto-generated constructor stub
-=======
+	}
 	@OneToMany(cascade = CascadeType.ALL, mappedBy="client")
 
 	private List<OrderMouna>orderm ;
@@ -50,37 +51,36 @@ public class Client extends User  {
 	
 	public List<OrderMouna> getOrderm() {
 		return orderm;
->>>>>>> 58f61a5 Fixing the loops and starting the Crud of poduct
+
 	}
-<<<<<<< main
-=======
+
 	public void setOrderm(List<OrderMouna> orderm) {
-		this.orderm = orderm;
->>>>>>> 58f61a5 Fixing the loops and starting the Crud of poduct
+		this.orderm = orderm;}
+
 
 	public Client(int id_user, List<Complaint> complaints, String first_name, String last_name, int phone_number,
 			String email, String password, String gender, String username, Date date, String address, String city, List<Event> listevent, List<Comment> comment,
 			List<Order> order, List<SubjectForum> listsubjectforum) {
 		super(id_user, complaints, first_name,last_name, phone_number,email,password,  gender,username, date);
-		//this.id_user = id_user;
+		this.id_user = id_user;
 		
 		this.address = address;
 		this.city = city;
 		this.listevent = listevent;
 		this.comment = comment;
-		//this.order = order;
+		this.order = order;
 		this.listsubjectforum = listsubjectforum;
 	}
 	
-	//@OneToMany(mappedBy="client")
-	//List<Order> order;
+	@OneToMany(mappedBy="client")
+	List<Order> order;
     
-	//public List<Order> getOrder() {
-		//return order;
-	//}
-	//public void setOrder(List<Order> order) {
-		//this.order = order;
-	//}
+	public List<Order> getOrder() {
+		return order;
+	}
+	public void setOrder(List<Order> order) {
+		this.order = order;
+	}
 	@ManyToMany(mappedBy="listclient")
 	private List<SubjectForum> listsubjectforum;
 	

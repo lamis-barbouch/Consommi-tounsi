@@ -14,11 +14,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-<<<<<<< main
+
 //import javax.persistence.TemporalType;
-=======
+
 import javax.persistence.TemporalType;
->>>>>>> 58f61a5 Fixing the loops and starting the Crud of poduct
+
 
 @Entity
 public class Cart implements Serializable {
@@ -55,11 +55,10 @@ public class Cart implements Serializable {
 		this.codePromo = codePromo;
 	}
 	//end 
-<<<<<<< main
-	
-=======
 
->>>>>>> 58f61a5 Fixing the loops and starting the Crud of poduct
+	
+
+
 	
 
 	public void setId_cart(int id_cart) {
