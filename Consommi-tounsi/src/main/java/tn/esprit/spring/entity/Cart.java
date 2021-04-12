@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -52,11 +53,7 @@ public class Cart implements Serializable {
 	//end 
 	
 	
-	@OneToOne
-	private Donation donation;
-	public int getId_cart() {
-		return id_cart;
-	}
+
 	public void setId_cart(int id_cart) {
 		this.id_cart = id_cart;
 	}
@@ -90,4 +87,7 @@ public class Cart implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 	
+	//By lamis 
+	@OneToOne(cascade=CascadeType.REMOVE)
+	private Donation donation; 
 }

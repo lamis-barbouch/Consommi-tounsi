@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tn.esprit.spring.entity.Client;
+
 import tn.esprit.spring.entity.DeliveryMan;
 import tn.esprit.spring.entity.UserErrors;
 import tn.esprit.spring.repository.IDeliveryManRepository;

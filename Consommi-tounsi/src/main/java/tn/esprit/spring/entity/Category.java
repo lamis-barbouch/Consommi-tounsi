@@ -11,6 +11,8 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Category implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_category;
@@ -43,5 +45,10 @@ public class Category implements Serializable {
 	public void setName_category(String name_category) {
 		this.name_category = name_category;
 	}
-	
+	@Override
+	public String toString() {
+		return "Category [id_category=" + id_category + ", name_category=" + name_category + ", products=" + products
+				+ "]";
+	}
+		
 }

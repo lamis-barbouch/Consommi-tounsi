@@ -23,7 +23,14 @@ public class Admin extends User
 
 @OneToMany(mappedBy="admin")
 	private List<Event> event;
-    private int rib;
+    public boolean isActived() {
+	return actived;
+}
+public void setActived(boolean actived) {
+	this.actived = actived;
+}
+	private int rib;
+    private boolean actived;
 
    public Admin() {
 	super();
@@ -63,7 +70,7 @@ public static long getSerialversionuid() {
 	return serialVersionUID;
 }
 private String dicForbiddenWords;
-   private float salary;
+private float salary;
 
 
 }

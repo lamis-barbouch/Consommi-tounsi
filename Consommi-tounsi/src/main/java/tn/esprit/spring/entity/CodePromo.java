@@ -11,14 +11,16 @@ import javax.persistence.OneToMany;
 
 @Entity  
 public class CodePromo implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id_codePromo;
 	private String code_promo;
 	private boolean status_CodePromo;
 	
-	@OneToMany(mappedBy="codePromo")
-	 private List<Cart> carts;
+	/*@OneToMany(mappedBy="codePromo")
+	 private List<Cart> carts;*/
 	
 	
 	

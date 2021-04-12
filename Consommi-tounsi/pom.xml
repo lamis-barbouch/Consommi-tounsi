@@ -17,28 +17,14 @@
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 	</properties>
-	<dependencies>
+<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+		</dependency> 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper -->
-
-		
-		
-		
-		
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -50,21 +36,63 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<dependency>
+<groupId>org.apache.myfaces.core</groupId>
+<artifactId>myfaces-impl</artifactId>
+<version>2.2.12</version>
+</dependency>
+<dependency>
+<groupId>org.apache.myfaces.core</groupId>
+<artifactId>myfaces-api</artifactId>
+<version>2.2.12</version>
+</dependency>
+<dependency>
+<groupId>org.apache.tomcat.embed</groupId>
+<artifactId>tomcat-embed-jasper</artifactId>
+</dependency>
+<dependency>
+<groupId>org.ocpsoft.rewrite</groupId>
+<artifactId>rewrite-servlet</artifactId>
+<version>3.4.1.Final</version>
+</dependency>
+<dependency>
+<groupId>org.ocpsoft.rewrite</groupId>
+<artifactId>rewrite-integration-faces</artifactId>
+<version>3.4.1.Final</version>
+</dependency>
+<dependency>
+<groupId>org.primefaces</groupId>
+<artifactId>primefaces</artifactId>
+<version>6.1</version>
+</dependency>
+
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-thymeleaf</artifactId>
+</dependency>
 	</dependencies>
 
 	<build>
+	    
+        
 		<plugins>
 			<plugin>
+			
+			
+			    
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+			    <outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+			    </configuration>
+				
 			</plugin>
+			
 		</plugins>
 	</build>
 

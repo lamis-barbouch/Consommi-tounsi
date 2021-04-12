@@ -11,8 +11,8 @@ import tn.esprit.spring.entity.DeliveryMan;
 
 public interface IDeliveryManRepository extends CrudRepository<DeliveryMan, Integer>
 {
-	@Query("SELECT d FROM DeliveryMan d WHERE d.username = :username")
-	DeliveryMan getDeliveryManByUsername(@Param("username") String username );
+     	@Query("SELECT d FROM DeliveryMan d WHERE d.username = :username")
+	    DeliveryMan getDeliveryManByUsername(@Param("username") String username );
 		@Query("SELECT d FROM DeliveryMan d WHERE d.email = :email")
 		DeliveryMan getDeliveryManByEmail(@Param("email") String email );
 

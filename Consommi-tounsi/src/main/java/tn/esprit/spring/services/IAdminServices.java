@@ -10,5 +10,6 @@ public interface IAdminServices {
 	public UserErrors addAdmin(Admin a);
     public Admin getadminByUsername(String username);
     public Admin getadminByEmail(String email);
+	
 
 }
