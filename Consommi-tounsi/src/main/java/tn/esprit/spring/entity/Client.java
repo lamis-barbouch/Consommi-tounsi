@@ -37,10 +37,26 @@ public class Client extends User  {
 	@OneToMany(mappedBy="client")
 	private List<Comment> comment;
 
+<<<<<<< main
 	public Client() {
 		super();
 		// TODO Auto-generated constructor stub
+=======
+	@OneToMany(cascade = CascadeType.ALL, mappedBy="client")
+
+	private List<OrderMouna>orderm ;
+	
+	
+	
+	public List<OrderMouna> getOrderm() {
+		return orderm;
+>>>>>>> 58f61a5 Fixing the loops and starting the Crud of poduct
 	}
+<<<<<<< main
+=======
+	public void setOrderm(List<OrderMouna> orderm) {
+		this.orderm = orderm;
+>>>>>>> 58f61a5 Fixing the loops and starting the Crud of poduct
 
 	public Client(int id_user, List<Complaint> complaints, String first_name, String last_name, int phone_number,
 			String email, String password, String gender, String username, Date date, String address, String city, List<Event> listevent, List<Comment> comment,
